@@ -1,0 +1,26 @@
+.webinarCard {
+  display: flex;
+  width: 360px;
+  flex-direction: column;
+  align-items: flex-start;
+
+  .thumbnail {
+    border-radius: 8px 8px 0 0;
+    overflow: hidden;
+    position: relative;
+    img {
+      max-height: 235px;
+      
+    }
+
+    .liveTag {
+        position: absolute;
+      display: flex;
+      gap: 8px;
+      color: white;
+      padding: 3px 8px;
+      border-radius: 28px;
+      background:  #e2504b
+    }
+  }
+}

@@ -1,0 +1,31 @@
+.layoutContainer {
+  h1 {
+    margin: 24px 0;
+  }
+}
+
+.tabContainer {
+  // font-family: "Lexend Deca" !important;
+  margin-bottom: 24px;
+  ul {
+    display: flex;
+    gap: 16px;
+    list-style: none;
+    border-bottom: 1px solid #eee;
+    padding: 0;
+    li {
+      font-size: 16px;
+      font-weight: 700;
+
+      cursor: pointer;
+
+      color: #737171;
+      padding: 0 19px 8px;
+    }
+
+    li.active {
+      color: #1d1919 !important;
+      border-bottom: 3px solid #1d1919;
+    }
+  }
+}

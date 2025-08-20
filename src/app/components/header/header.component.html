@@ -1,0 +1,38 @@
+<header>
+  <div class="between gapping">
+    <div class="between gap12">
+      <img src="/assets/mainLogo.png" alt="" />
+      <div class="posRel input">
+        <input type="text" placeholder="Search in docquity" />
+        <img src="/assets/icons/Search.png" alt="" class="searchIcon" />
+      </div>
+    </div>
+
+    <div class="nav">
+      <ng-container *ngFor="let nav of navs">
+        <div>
+          <img [src]="nav.icon" alt="" />
+          <p>{{ nav.name }}</p>
+        </div>
+      </ng-container>
+
+      <button class="postBtn">
+        <img src="/assets/icons/+.png" alt="" srcset="" /><span>Post</span>
+      </button>
+      <div class="center gap12">
+        <div class="posRel">
+          <img src="/assets/icons/Ellipse 156.png" alt="" />
+          <img
+            class="greenMark"
+            src="/assets/icons/Header User Icon Container.png"
+            alt=""
+          />
+        </div>
+        <div class="center">
+          <p style="font-family: 'Lexend Deca' !important">Aaron</p>
+          <img src="/assets/icons/Chevron.png" alt="" srcset="" />
+        </div>
+      </div>
+    </div>
+  </div>
+</header>

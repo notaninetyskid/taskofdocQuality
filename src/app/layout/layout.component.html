@@ -1,0 +1,22 @@
+<div class="layoutContainer">
+  <h1>Webinar</h1>
+
+  <div class="tabContainer">
+    <ul>
+      <li
+        *ngFor="let tab of tabs"
+        [ngClass]="{ active: active == tab }"
+        (click)="active = tab"
+      >
+        {{ tab }}
+      </li>
+    </ul>
+  </div>
+
+  <ng-container *ngIf="active == 'Live' || active == 'For you'">
+    <app-webinar-section title="Live" [webinars]="webinars" [live]="true"></app-webinar-section>
+  </ng-container>
+  <ng-container *ngIf="active == 'Upcoming' || active == 'For you'">
+    <app-webinar-section title="Upcoming" [webinars]="webinars"></app-webinar-section>
+  </ng-container>
+</div>
