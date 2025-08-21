@@ -44,7 +44,7 @@
 
             <div class="livePeople">
               <img src="/assets/icons/People.svg" alt="" />
-              <p>{{ data?.peopleWatching }}+</p>
+              <p>{{ data.peopleWatching }}+</p>
             </div>
           </div>
           <div class="topeLiveRight">
@@ -57,7 +57,7 @@
     <ng-container
       *ngIf="type == 'Live' || data.type == 'regular' || data.type == 'Live'"
     >
-      <p class="timing">{{ data?.duration }}</p>
+      <p class="timing">{{ data.duration }}</p>
     </ng-container>
   </div>
   <svg
@@ -76,8 +76,8 @@
       <div class="marginBottom12">
         <div class="credit">
           <img src="/assets/icons/Frame 48100047.png" alt="" />
-          <p>
-            {{ data?.credits?.credit }} Credits
+          <p *ngIf="data?.credits?.credit as credits">
+            {{ credits }} Credits
             <span
               *ngIf="data?.credits?.expiringIn as expiringIn"
               [ngStyle]="{
