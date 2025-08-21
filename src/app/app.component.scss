@@ -1,8 +1,8 @@
 .container {
   width: 1125px;
   padding: 0 !important;
-  // @media (min-width: 768px) and (max-width: 991px) {
-  //   margin: 0 60px; 
-  // }
+  @media (min-width: 576px) and (max-width: 768px) {
+    margin: 0; 
+  }
 }
 

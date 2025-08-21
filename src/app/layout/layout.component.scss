@@ -6,6 +6,11 @@
   }
 }
 
+.gap24 {
+  display: flex;
+  gap: 24px;
+}
+
 .tabContainer {
   // font-family: "Lexend Deca" !important;
   margin-bottom: 24px;
@@ -16,6 +21,12 @@
     list-style: none;
     border-bottom: 1px solid #eee;
     padding: 0;
+
+    @media (min-width: 576px) and (max-width: 768px) {
+      gap: unset !important;
+      justify-content: space-between;
+      padding: 10px 16px 0 16px;
+    }
     li {
       font-size: 16px;
       font-weight: 700;
@@ -32,5 +43,3 @@
     }
   }
 }
-
-
