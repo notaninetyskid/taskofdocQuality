@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core'
 import { NgbOffcanvas } from '@ng-bootstrap/ng-bootstrap';
 import { SidebarComponent } from '../sidebar/sidebar.component';
+// import { NgbOffcanvas } from '@ng-bootstrap/ng-bootstrap'
+// import { SidebarComponent } from '../sidebar/sidebar.component'
 
 @Component({
   selector: 'app-header',
@@ -36,6 +38,9 @@ export class HeaderComponent implements OnInit {
   }
 
   openSideBar () {
-    this.offcanvasService.open(SidebarComponent, { position: 'start' })
+    this.offcanvasService.open(SidebarComponent, { 
+      position: 'start',
+      panelClass: 'widthSettings'
+     })
   }
 }

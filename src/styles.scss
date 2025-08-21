@@ -2,7 +2,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Lexend+Deca:wght@100..900&display=swap');
-
+@import 'src/variables';
 * {
   font-family: 'Manrope' !important;
 }
@@ -13,6 +13,10 @@ button {
 p {
   margin: 0 !important;
   font-size: 14px !important;
+}
+
+.pointer {
+  cursor: pointer;
 }
 
 h1 {
@@ -76,4 +80,10 @@ input:focus-visible {
   p {
     font-size: 15px !important;
   }
+}
+
+.widthSettings {
+      width: 90px !important;
+  border: 0;
+  color: black !important;
 }
