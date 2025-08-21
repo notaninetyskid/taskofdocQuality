@@ -58,6 +58,21 @@ export class LayoutComponent implements OnInit {
       },
       keyHighlight: 'Manage chronic and complex diseases',
       goesLiveOn: '1736245800000'
+    },
+    {
+      Thumbnail: '/assets/webinarCards/220923_FKUI_APPS 2.png',
+      uploadedBy: {
+        img: '/assets/icons/image 171.png',
+        name: 'by PDGI Indonesia'
+      },
+      description:
+        'Controversies in Bipolar 1 Disorder (BP-1): Implications for Asthama from',
+      credits: {
+        credit: '2',
+        expiringIn: 85800000
+      },
+      keyHighlight: 'Manage chronic and complex diseases',
+      goesLiveOn: '1736245800000'
     }
   ]
 

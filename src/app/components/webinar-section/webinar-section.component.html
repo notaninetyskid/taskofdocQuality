@@ -1,25 +1,50 @@
 <div class="marginBottom40">
-  <div class="between headingH3">
+  <div class="between headingH3 d-none d-md-flex">
     <h2 class="m-0">{{ title }}</h2>
     <button class="btn viewAll">View all</button>
   </div>
 
-  <div
-    class="section"
-    [ngClass]="{ live: type == 'Live', 'p-0': type != 'Live' }"
-  >
-    <ng-container *ngFor="let webinar of webinars">
-      <ng-container *ngIf="type == 'Continue'">
-        <div class="continueWatchingCard">
-          <app-continue-watching [data]="webinar"></app-continue-watching>
-        </div>
-      </ng-container>
+  <div [ngClass]="{ live: type == 'Live', 'p-0': type != 'Live' }">
+    <div class="between mzro d-flex d-md-none">
+      <h2 class="m-0">{{ title }}</h2>
+      <button class="btn viewAll Small d-flex">
+        <p>View all</p>
+        <img
+          style="transform: rotate(180deg)"
+          src="/assets/icons/Arrow.png"
+          alt=""
+          height="16"
+          width="16"
+        />
+      </button>
+    </div>
+    <div class="section">
+      <ng-container *ngFor="let webinar of webinars">
+        <ng-container *ngIf="type == 'Continue'">
+          <div class="continueWatchingCard">
+            <app-continue-watching [data]="webinar"></app-continue-watching>
+          </div>
+        </ng-container>
 
-      <ng-container *ngIf="type != 'Continue'">
-        <div class="cards">
-          <app-webinar-card [type]="type" [data]="webinar"> </app-webinar-card>
-        </div>
+        <ng-container *ngIf="type != 'Continue'">
+          <div
+            class="cards"
+            [ngStyle]="{
+              background:
+                type == 'Live' || (type == 'Based' && webinar.type == 'Live')
+                  ? 'linear-gradient(
+    180deg,
+    rgba(29, 25, 25, 0.6) 0%,
+    rgba(0, 0, 0, 0) 100%
+  )'
+                  : ''
+            }"
+          >
+            <app-webinar-card [type]="type" [data]="webinar">
+            </app-webinar-card>
+          </div>
+        </ng-container>
       </ng-container>
-    </ng-container>
+    </div>
   </div>
 </div>

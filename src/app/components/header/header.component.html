@@ -1,55 +1,62 @@
-<header>
-  <div class="between gapping">
-    <div class="between gap12">
-      <img src="/assets/mainLogo.png" alt="" class="d-none d-lg-block" />
-      <img
-        src="/assets/icons/Group 1171278432.png"
-        alt=""
-        (click)="openSideBar()"
-        class="d-none d-md-block d-lg-none"
-      />
-      <div class="posRel input">
-        <input type="text" placeholder="Search in docquity" />
-        <img src="/assets/icons/Search.png" alt="" class="searchIcon" />
-      </div>
-    </div>
-
-    <div class="nav">
-      <ng-container *ngFor="let nav of navs">
-        <div
-          class="d-none d-lg-block"
-          (click)="markItOn(nav.name)"
-          [ngClass]="{ active: activeTab == nav.name }"
-        >
-          <img [src]="nav.icon" alt="" />
-          <p>{{ nav.name }}</p>
+<header >
+  <div class="container">
+    <div class="between gapping">
+      <div class="between gap12">
+        <img src="/assets/mainLogo.png" alt="" class="d-none d-lg-block" />
+        <img
+          src="/assets/icons/Group 1171278432.png"
+          alt=""
+          (click)="openSideBar()"
+          class="d-none d-md-block d-lg-none"
+        />
+        <div class="posRel input">
+          <input type="text" placeholder="Search in docquity" />
+          <img src="/assets/icons/Search.png" alt="" class="searchIcon" />
         </div>
-      </ng-container>
-      <div>
-        <img src="/assets/icons/Bell.png" alt="" />
-
-        <p class="d-none d-lg-block">Notification</p>
       </div>
 
-      <button class="postBtn d-none d-lg-flex">
-        <img src="/assets/icons/+.png" alt="" srcset="" /><span>Post</span>
-      </button>
-      <button class="postBtnSmall d-none d-md-block d-lg-none">
-        <img src="/assets/icons/+.png" alt="" srcset="" />
-      </button>
+      <div class="nav">
+        <ng-container *ngFor="let nav of navs">
+          <div
+            class="d-none d-lg-block"
+            (click)="markItOn(nav.name)"
+            [ngClass]="{ active: activeTab == nav.name }"
+          >
+            <img [src]="nav.icon" alt="" />
+            <p>{{ nav.name }}</p>
+          </div>
+        </ng-container>
+        <div>
+          <img src="/assets/icons/Bell.png" alt="" />
 
-      <div class="center gap12 d-none d-md-flex">
-        <div class="posRel">
-          <img src="/assets/icons/Ellipse 156.png" alt="" />
-          <img
-            class="greenMark"
-            src="/assets/icons/Header User Icon Container.png"
-            alt=""
-          />
+          <p class="d-none d-lg-block">Notification</p>
         </div>
-        <div class="center">
-          <p class="d-none d-lg-block" style="font-family: 'Lexend Deca' !important">Aaron</p>
-          <img src="/assets/icons/Chevron.png" alt="" srcset="" />
+
+        <button class="postBtn d-none d-lg-flex">
+          <img src="/assets/icons/+.png" alt="" srcset="" /><span>Post</span>
+        </button>
+        <button class="postBtnSmall d-none d-md-block d-lg-none">
+          <img src="/assets/icons/+.png" alt="" srcset="" />
+        </button>
+
+        <div class="center gap12 d-none d-md-flex">
+          <div class="posRel">
+            <img src="/assets/icons/Ellipse 156.png" alt="" />
+            <img
+              class="greenMark"
+              src="/assets/icons/Header User Icon Container.png"
+              alt=""
+            />
+          </div>
+          <div class="center">
+            <p
+              class="d-none d-lg-block"
+              style="font-family: 'Lexend Deca' !important"
+            >
+              Aaron
+            </p>
+            <img src="/assets/icons/Chevron.png" alt="" srcset="" />
+          </div>
         </div>
       </div>
     </div>
