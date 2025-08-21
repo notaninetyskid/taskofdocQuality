@@ -1,13 +1,13 @@
 <div class="speakersCard">
   <div class="posRel widthManagement">
-    <img src="/assets/asianDoc.png" alt="" />
-    <div class="liveTag">
+    <img [src]="data.img" alt="" [ngStyle]="{'border': data.live? '2px solid #e2504b': '2px solid transparent'}"/>
+    <div class="liveTag" *ngIf="data.live">
       <img src="/assets/icons/smallMinimal.png" alt="" />
       <p>Live</p>
     </div>
   </div>
 
-  <h3>Dr Wuyama Guramg</h3>
-  <p class="name">Gastroenterologist, Surgeon</p>
+  <h3>{{data.name}}</h3>
+  <p class="name">{{data.position}}</p>
   <button class="viewProfile">View Profile</button>
 </div>

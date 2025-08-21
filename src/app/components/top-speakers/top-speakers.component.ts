@@ -1,4 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
+import { speaker } from 'src/app/modals/speakers.modal';
 
 @Component({
   selector: 'app-top-speakers',
@@ -7,7 +8,7 @@ import { Component, Input, OnInit } from '@angular/core';
 })
 export class TopSpeakersComponent implements OnInit {
 
-  @Input() data: any;
+  @Input() data!: speaker;
   @Input() type!: string;
   constructor() { }
 
