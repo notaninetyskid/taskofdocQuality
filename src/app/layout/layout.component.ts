@@ -61,42 +61,55 @@ export class LayoutComponent implements OnInit {
     }
   ]
 
-  webinars: Webinar[] = [
+  webinarsBased: Webinar[] = [
     {
-      Thumbnail: '/assets/webinarCards/image 124.png',
+      Thumbnail: '/assets/webinarCards/webinar-1 1.png',
       uploadedBy: {
-        img: '',
-        name: ''
+        img: '/assets/icons/image 171.png',
+        name: 'by PDGI Indonesia'
       },
-      description: '1',
+      description: 'The Covid19 Management of Parox Health caretine',
       credits: {
-        credit: '1',
-        expiringIn: 1
-      }
+        credit: '2',
+        expiringIn: 0
+      },
+      duration: '24:50',
+      keyHighlight: 'Manage chronic and complex diseases',
+      goesLiveOn: '1736245800000',
+      type: 'regular'
     },
     {
-      Thumbnail: '/assets/webinarCards/image 124.png',
+      Thumbnail: '/assets/webinarCards/220923_FKUI_APPS 2.png',
       uploadedBy: {
-        img: '',
-        name: ''
+        img: '/assets/icons/image 171.png',
+        name: 'by PDGI Indonesia'
       },
-      description: '1',
+      description: 'The Covid19 Management of Parox Health caretine',
       credits: {
-        credit: '1',
-        expiringIn: 1
-      }
+        credit: '2',
+        expiringIn: 0
+      },
+      keyHighlight: 'Manage chronic and complex diseases',
+      goesLiveOn: '1736245800000',
+      type: 'Upcoming'
     },
     {
-      Thumbnail: '/assets/webinarCards/image 124.png',
+      Thumbnail: '/assets/webinarCards/image2.png',
       uploadedBy: {
-        img: '',
-        name: ''
+        img: '/assets/icons/download 1.png',
+        name: 'by PDGI Indonesia'
       },
-      description: '1',
+      description: 'The Covid19 Management of Parox Health caretine',
       credits: {
-        credit: '1',
-        expiringIn: 1
-      }
+        credit: '2',
+        expiringIn: 0
+      },
+      duration: '24:50',
+
+      keyHighlight: 'Manage chronic and complex diseases',
+      goesLiveOn: '1736245800000',
+      peopleWatching: 200,
+      type: 'Live'
     }
   ]
 
@@ -153,6 +166,54 @@ export class LayoutComponent implements OnInit {
   ]
 
   continueWatching: Webinar[] = [
+    {
+      Thumbnail: '/assets/webinarCards/webinar-1 1.png',
+      uploadedBy: {
+        img: '/assets/icons/image 171.png',
+        name: 'by PDGI Indonesia',
+        minLeft: 62000
+      },
+      description: 'New Perspectives in The Covid19 Management',
+      progress: 50,
+      duration: '24:50',
+      keyHighlight: 'Manage chronic and complex diseases'
+    },
+    {
+      Thumbnail: '/assets/webinarCards/webinar-1 1.png',
+      uploadedBy: {
+        img: '/assets/icons/image 171.png',
+        name: 'by PDGI Indonesia',
+        minLeft: 62000
+      },
+      description: 'Perspectives in The Covid19 Management',
+      progress: 50,
+      duration: '24:50',
+      keyHighlight: 'Manage chronic and complex diseases'
+    },
+    {
+      Thumbnail: '/assets/webinarCards/webinar-1 1.png',
+      uploadedBy: {
+        img: '/assets/icons/image 171.png',
+        name: 'by PDGI Indonesia',
+        minLeft: 62000
+      },
+      description: 'New Perspectives in The 12',
+      progress: 50,
+      duration: '24:50',
+      keyHighlight: 'Manage chronic and complex diseases'
+    },
+    {
+      Thumbnail: '/assets/webinarCards/webinar-1 1.png',
+      uploadedBy: {
+        img: '/assets/icons/image 171.png',
+        name: 'by PDGI Indonesia',
+        minLeft: 62000
+      },
+      description: 'New Perspectives in The 12',
+      progress: 50,
+      duration: '24:50',
+      keyHighlight: 'Manage chronic and complex diseases'
+    },
     {
       Thumbnail: '/assets/webinarCards/webinar-1 1.png',
       uploadedBy: {

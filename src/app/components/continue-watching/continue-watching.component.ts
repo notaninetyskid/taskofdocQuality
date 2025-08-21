@@ -13,10 +13,10 @@ export class ContinueWatchingComponent implements OnInit {
 
   ngOnInit (): void {}
 
-  progress: number = 50 
+  // progress: number = 50 
 
-  get dashOffset () {
+  dashOffset(progress: number) {
     const total = 360
-    return total - (this.progress / 100) * total
+    return total - (progress / 100) * total
   }
 }

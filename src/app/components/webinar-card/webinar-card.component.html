@@ -1,26 +1,50 @@
 <div class="webinarCard">
   <div class="thumbnail">
-    <img [src]="data.Thumbnail" alt="Thumbnail" />
+    <img class="thumb" [src]="data.Thumbnail" alt="Thumbnail" />
 
-    <ng-container *ngIf="type == 'Live'">
+    <ng-container *ngIf="type == 'Live' || data.type == 'Live'">
       <div>
-        <div class="topLive">
-          <div class="liveTag">
-            <img src="/assets/icons/Live minimal.svg" alt="" />
-            <p>Live</p>
-          </div>
+        <div class="topCover">
+          <div class="topLive">
+            <div
+              class="liveTag"
+              [ngStyle]="{ background: data.type == 'Live' ? 'white' : '' }"
+            >
+              <img
+                *ngIf="!data.type"
+                src="/assets/icons/Live minimal.svg"
+                alt=""
+              />
+              <img
+                *ngIf="data.type == 'Live'"
+                src="/assets/icons/Live minimalWhite.svg"
+                alt=""
+              />
+              <p [ngStyle]="{ color: data.type == 'Live' ? '#e2504b' : '' }">
+                Live
+              </p>
+            </div>
 
-          <div class="livePeople">
-            <img src="/assets/icons/People.svg" alt="" />
-            <p>{{ data?.peopleWatching }}+</p>
+            <div class="livePeople">
+              <img src="/assets/icons/People.svg" alt="" />
+              <p>{{ data?.peopleWatching }}+</p>
+            </div>
+          </div>
+          <div class="topeLiveRight">
+            <img src="/assets/icons/Group 1171284097.png" alt="" />
+            <img src="/assets/icons/Group 1171284098.png" alt="" />
           </div>
         </div>
       </div>
-
+    </ng-container>
+    <ng-container
+      *ngIf="type == 'Live' || data.type == 'regular' || data.type == 'Live'"
+    >
       <p class="timing">{{ data?.duration }}</p>
     </ng-container>
   </div>
   <svg
+    *ngIf="type == 'Live' || data.type == 'Live'"
     xmlns="http://www.w3.org/2000/svg"
     width="360"
     height="4"
@@ -48,20 +72,48 @@
         <h3>
           {{ data.description }}
         </h3>
-        <div class="titleCase">
+        <div class="titleCase d-none d-lg-inline-flex">
           <img [src]="data.uploadedBy.img" alt="" />
           <p>{{ data.uploadedBy.name }}</p>
         </div>
       </div>
 
-      <ng-container *ngIf="type != 'cardiology'">
+      <ng-container *ngIf="type != 'Based'">
         <div class="highlightCard">
           <p class="head">KEY HIGHLIGHTS</p>
           <p class="highLight">{{ data.keyHighlight }}</p>
         </div>
       </ng-container>
 
-      <ng-container *ngIf="type == 'cardiology'">
+      <div class="d-none d-md-block d-lg-none">
+        <div class="coverLikes">
+          <div class="titleOfCon">
+            <p>20 Likes</p>
+            <img src="/assets/icons/Ellipse 2991.png" alt="" />
+            <p>12 Comments</p>
+          </div>
+          <p>750 Views</p>
+        </div>
+      </div>
+      <div class="likeBottom">
+        <div>
+          <img src="/assets/icons/Upvote.svg" alt="" />
+          <p>Like</p>
+        </div>
+        <div>
+          <img src="/assets/icons/Coment.svg" alt="" />
+          <p>Comment</p>
+        </div>
+        <div>
+          <img src="/assets/icons/Mask group.svg" alt="" />
+          <p>Repost</p>
+        </div>
+        <div>
+          <img src="/assets/icons/Forward.svg" alt="" />
+          <p>Share</p>
+        </div>
+      </div>
+      <ng-container *ngIf="type == 'Based'">
         <div class="realetdGuidlines">
           <img src="/assets/icons/image.png" alt="" />
           <div class="highlightCard border-0 px-0">
@@ -74,10 +126,20 @@
         </div>
       </ng-container>
 
-      <button *ngIf="type == 'Live'" class="watchNowBtn">Watch now</button>
+      <button
+        *ngIf="
+          type == 'Live' ||
+          (type == 'Based' && (data.type == 'regular' || data.type == 'Live'))
+        "
+        class="watchNowBtn d-md-none d-lg-block"
+      >
+        Watch now
+      </button>
     </div>
-    <ng-container *ngIf="type == 'Upcoming'">
-      <div class="goesLiveNow">
+    <ng-container
+      *ngIf="type == 'Upcoming' || (type == 'Based' && data.type == 'Upcoming')"
+    >
+      <div class="goesLiveNow d-md-none d-md-block">
         <div>
           <p class="goLiveSmall">Goes live on</p>
           <p class="goLiveBig">

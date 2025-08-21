@@ -1,7 +1,11 @@
 <div class="layoutContainer">
   <h1>Webinar</h1>
-
-  <div class="tabContainer">
+  <!-- display: flex;
+  align-items: start;
+  justify-content: space-between; -->
+  <div
+    class="tabContainer d-md-flex justify-content-md-between align-items-md-start"
+  >
     <ul>
       <li
         *ngFor="let tab of tabs"
@@ -11,6 +15,12 @@
         {{ tab }}
       </li>
     </ul>
+
+    <img
+      class="d-none d-md-block d-lg-none"
+      src="/assets/icons/Filter.png"
+      alt=""
+    />
   </div>
 
   <ng-container *ngIf="active == 'Live' || active == 'For you'">
@@ -32,7 +42,7 @@
   <ng-container *ngIf="active == 'For you'">
     <app-webinar-section
       title="Continue watching"
-      [webinars]="webinars"
+      [webinars]="continueWatching"
       [type]="'Continue'"
     ></app-webinar-section>
   </ng-container>
@@ -40,8 +50,8 @@
   <ng-container *ngIf="active == 'For you'">
     <app-webinar-section
       title="Webinars based on cardiology"
-      [webinars]="webinars"
-      [type]="'cardiology'"
+      [webinars]="webinarsBased"
+      [type]="'Based'"
     ></app-webinar-section>
   </ng-container>
 </div>

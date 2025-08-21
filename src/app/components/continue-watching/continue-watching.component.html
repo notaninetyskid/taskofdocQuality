@@ -1,9 +1,9 @@
 <div class="continueCard">
   <div class="thumbnail">
     <img [src]="data.Thumbnail" alt="" />
-    <p class="timing">{{data.duration}}</p>
+    <p class="timing">{{ data.duration }}</p>
   </div>
-  <svg
+  <svg *ngIf="data.progress as prgrs"
     xmlns="http://www.w3.org/2000/svg"
     height="4"
     style="width: 100%"
@@ -16,17 +16,19 @@
       stroke="#E2504B"
       stroke-width="3"
       stroke-dasharray="360"
-      [attr.stroke-dashoffset]="dashOffset"
+      [attr.stroke-dashoffset]="dashOffset(prgrs)"
     />
   </svg>
   <div class="downpart">
     <h3>
-      Controversies in Bipolar 1 Disorder (BP-1): Implications for Asthama from
+      {{ data.description }}
     </h3>
     <div class="titleOfCon">
-      <p class="eli">by Pfizer Indo...</p>
+      <p class="eli">{{ data.uploadedBy.name }}</p>
       <img src="/assets/icons/Ellipse 2991.png" alt="" />
-      <p>10 min left</p>
+      <p *ngIf="data?.uploadedBy?.minLeft as minLeft">
+        {{ minLeft | timeLeft }}
+      </p>
     </div>
   </div>
 </div>

@@ -7,14 +7,24 @@ header {
 .nav {
   display: flex;
   gap: 24px;
+  align-items: center;
   div {
     text-align: center;
+    cursor: pointer;
+  }
+
+  div.active {
+    border-bottom: 2.5px solid black;
   }
 }
 
 .gapping {
-  justify-content: unset !important;
+  // justify-content: unset !important;
   gap: 63px !important;
+
+  @media (min-width: 768px) and (max-width: 991px) {
+    gap: 27px !important;
+  }
 }
 
 img.searchIcon {
@@ -27,6 +37,11 @@ img.searchIcon {
 .posRel.input {
   height: 52px;
   width: 342px;
+
+  @media (min-width: 768px) and (max-width: 991px) {
+    width: 375px;
+    height: 43px;
+  }
 }
 
 .posRel.input input {
@@ -40,6 +55,23 @@ img.searchIcon {
   &::placeholder {
     font-size: 14px;
   }
+}
+
+.postBtnSmall {
+  padding: 0 !important;
+  text-align: center;
+  width: 48px;
+  height: 44px;
+  color: white;
+  flex-shrink: 0;
+  border-radius: 92px;
+  background: linear-gradient(
+    94deg,
+    #252424 4.48%,
+    #252424 4.49%,
+    #424242 87.94%
+  );
+  border: 0;
 }
 
 .postBtn {

@@ -9,6 +9,8 @@ import { WebinarSectionComponent } from './components/webinar-section/webinar-se
 import { WebinarCardComponent } from './components/webinar-card/webinar-card.component'
 import { ContinueWatchingComponent } from './components/continue-watching/continue-watching.component'
 import { MsToTimePipe } from './pipes/timeConverter.pipe'
+import { timeLeftPipe } from './pipes/timeLeft.pipe';
+import { SidebarComponent } from './components/sidebar/sidebar.component'
 
 @NgModule({
   declarations: [
@@ -19,8 +21,9 @@ import { MsToTimePipe } from './pipes/timeConverter.pipe'
     WebinarSectionComponent,
     WebinarCardComponent,
     ContinueWatchingComponent,
-
-    MsToTimePipe
+    timeLeftPipe,
+    MsToTimePipe,
+    SidebarComponent
   ],
   imports: [BrowserModule],
   providers: [],

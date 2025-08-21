@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core'
+import { NgbOffcanvas } from '@ng-bootstrap/ng-bootstrap';
+import { SidebarComponent } from '../sidebar/sidebar.component';
 
 @Component({
   selector: 'app-header',
@@ -6,7 +8,7 @@ import { Component, OnInit } from '@angular/core'
   styleUrls: ['./header.component.scss']
 })
 export class HeaderComponent implements OnInit {
-  constructor () {}
+  constructor (private offcanvasService: NgbOffcanvas) {}
 
   navs: { name: string; icon: string }[] = [
     {
@@ -24,12 +26,16 @@ export class HeaderComponent implements OnInit {
     {
       name: 'Calendar',
       icon: '/assets/icons/Calender.png'
-    },
-    {
-      name: 'Notification',
-      icon: '/assets/icons/Bell.png'
-    },
+    }
   ]
-
   ngOnInit (): void {}
+
+  activeTab: string = 'Webinar'
+  markItOn (s: string) {
+    this.activeTab = s
+  }
+
+  openSideBar () {
+    this.offcanvasService.open(SidebarComponent, { position: 'start' })
+  }
 }

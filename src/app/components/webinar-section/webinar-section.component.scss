@@ -5,6 +5,10 @@
 .live {
   border-radius: 4px;
   background: linear-gradient(190deg, #ffd8bd -92.66%, #fff 112.07%);
+
+  @media (min-width: 768px) and (max-width: 991px) {
+    background: white !important;
+  }
 }
 
 .headingH3 {
@@ -28,6 +32,10 @@
 
   &::-webkit-scrollbar {
     display: none;
+  }
+
+   @media (min-width: 768px) and (max-width: 991px) {
+    padding: 0;
   }
 }
 

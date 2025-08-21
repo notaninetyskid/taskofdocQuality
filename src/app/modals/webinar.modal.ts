@@ -15,5 +15,6 @@ export interface Webinar {
   statusBadge?: string;
   peopleWatching?: number;
   goesLiveOn?: string;
-  progress?: number
+  progress?: number;
+  type?: string
 }
