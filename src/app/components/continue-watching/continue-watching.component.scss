@@ -11,6 +11,11 @@
   border-bottom: 1px solid #eee;
   border-left: 1px solid #eee;
   background: #fff;
+
+  @media (max-width: 768px) {
+    box-shadow: 0 4px 8px 0 rgba(9, 9, 9, 0.04);
+  }
+  
   .thumbnail {
     border-radius: 8px 8px 0 0;
     overflow: hidden;
@@ -39,26 +44,26 @@
     // border-bottom: 1px solid #eee;
     // border-left: 1px solid #eee;
     background: #fff;
-      padding: 16px;
+    padding: 16px;
 
-      h3 {
-        font-weight: 600 !important;
-        margin-bottom: 8px;
-      }
-      .titleOfCon {
-        display: flex;
-        gap: 8px;
-        justify-content: start;
-        align-items: center;
-        color: $secondPColor;
-        font-weight: 500 !important;
-        .eli {
-          white-space: nowrap;
+    h3 {
+      font-weight: 600 !important;
+      margin-bottom: 8px;
+    }
+    .titleOfCon {
+      display: flex;
+      gap: 8px;
+      justify-content: start;
+      align-items: center;
+      color: $secondPColor;
+      font-weight: 500 !important;
+      .eli {
+        white-space: nowrap;
 
-          overflow: hidden;
-          text-overflow: ellipsis;
-          width: 80px;
-        }
+        overflow: hidden;
+        text-overflow: ellipsis;
+        width: 80px;
       }
+    }
   }
 }

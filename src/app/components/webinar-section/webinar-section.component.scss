@@ -28,15 +28,6 @@
   }
 }
 
-.Small {
-  align-items: center;
-  gap: 7px;
-
-  p {
-    font-size: 15px !important;
-  }
-}
-
 .mzro {
   margin-bottom: -12px;
   padding: 0 0 24px;
@@ -45,6 +36,7 @@
 .section {
   display: flex;
   gap: 16px;
+
   overflow-x: auto;
   overflow-y: hidden;
   -ms-overflow-style: none;
@@ -63,6 +55,7 @@
     .continueWatchingCard {
       max-width: 50%;
       background: 0;
+   
     }
   }
 }

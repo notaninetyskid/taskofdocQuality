@@ -1,7 +1,7 @@
 <div class="layoutContainer container">
   <h1 class="d-none d-md-block">Webinar</h1>
 
-  <div class="between d-md-none" style="padding: 16px 0;">
+  <div class="between d-md-none" style="padding: 16px 0">
     <div class="center gap12">
       <img src="/assets/icons/Arrow.png" alt="" />
       <h2 class="m-0">Webinar</h2>
@@ -55,11 +55,43 @@
     ></app-webinar-section>
   </ng-container>
 
+  <div class="browsByTopic d-block d-md-none">
+    <div class="between">
+      <p>Browse by topic</p>
+      <button class="btn viewAll Small d-flex">
+        <p>View all</p>
+        <img
+          style="transform: rotate(180deg)"
+          src="/assets/icons/Arrow.png"
+          alt=""
+          height="16"
+          width="16"
+        />
+      </button>
+    </div>
+
+    <div class="topicCards">
+      <div class="card" (click)="topicOfBased = 'cardiology'">cardiology(12)</div>
+      <div class="card" (click)="topicOfBased = 'Pain management'">Pain management(12)</div>
+      <div class="card" (click)="topicOfBased = 'Primary care'">Primary care(12)</div>
+      <div class="card" (click)="topicOfBased = 'Infection Medicine'">Infection Medicine(4)</div>
+    </div>
+    <img class="scroller" src="/assets/icons/Group 1171283786.png" alt="" />
+  </div>
+
   <ng-container *ngIf="active == 'For you'">
     <app-webinar-section
-      title="Webinars based on cardiology"
+      title="Webinars based on {{topicOfBased}}"
       [webinars]="webinarsBased"
       [type]="'Based'"
+    ></app-webinar-section>
+  </ng-container>
+
+  <ng-container>
+    <app-webinar-section
+      title="Top Speakers"
+      [speakers]="topSeekers"
+      [type]="'speakers'"
     ></app-webinar-section>
   </ng-container>
 </div>

@@ -1,4 +1,4 @@
-<div class="marginBottom40">
+<div [ngClass]="{ marginBottom40: type != 'Live' }">
   <div class="between headingH3 d-none d-md-flex">
     <h2 class="m-0">{{ title }}</h2>
     <button class="btn viewAll">View all</button>
@@ -19,31 +19,27 @@
       </button>
     </div>
     <div class="section">
-      <ng-container *ngFor="let webinar of webinars">
-        <ng-container *ngIf="type == 'Continue'">
-          <div class="continueWatchingCard">
-            <app-continue-watching [data]="webinar"></app-continue-watching>
-          </div>
-        </ng-container>
+      <ng-container *ngIf="type != 'speakers'">
+        <ng-container *ngFor="let webinar of webinars">
+          <ng-container *ngIf="type == 'Continue'">
+            <div class="continueWatchingCard">
+              <app-continue-watching [data]="webinar"></app-continue-watching>
+            </div>
+          </ng-container>
 
-        <ng-container *ngIf="type != 'Continue'">
-          <div
-            class="cards"
-            [ngStyle]="{
-              background:
-                type == 'Live' || (type == 'Based' && webinar.type == 'Live')
-                  ? 'linear-gradient(
-    180deg,
-    rgba(29, 25, 25, 0.6) 0%,
-    rgba(0, 0, 0, 0) 100%
-  )'
-                  : ''
-            }"
-          >
-            <app-webinar-card [type]="type" [data]="webinar">
-            </app-webinar-card>
-          </div>
+          <ng-container *ngIf="type != 'Continue'">
+            <div class="cards">
+              <app-webinar-card [type]="type" [data]="webinar">
+              </app-webinar-card>
+            </div>
+          </ng-container>
         </ng-container>
+      </ng-container>
+
+      <ng-container *ngFor="let speaker of speakers">
+        <div class="s">
+          <app-top-speakers [type]="type" [data]="speaker"></app-top-speakers>
+        </div>
       </ng-container>
     </div>
   </div>

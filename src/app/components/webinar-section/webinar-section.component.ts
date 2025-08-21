@@ -10,6 +10,7 @@ export class WebinarSectionComponent implements OnInit {
   @Input() title!: string
   @Input() type!: string
   @Input() webinars!: Webinar[]
+  @Input() speakers!: any[]
 
   constructor () {}
 

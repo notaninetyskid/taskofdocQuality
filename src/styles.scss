@@ -54,9 +54,6 @@ input:focus-visible {
   align-items: center;
 }
 
-.container {
-  // margin: 12px 146px !important;
-}
 
 .gap12 {
   gap: 12px;
@@ -68,4 +65,13 @@ input:focus-visible {
 
 .container {
   padding: 0 !important;
+}
+
+.Small {
+  align-items: center;
+  gap: 7px;
+
+  p {
+    font-size: 15px !important;
+  }
 }

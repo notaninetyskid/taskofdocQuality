@@ -177,6 +177,22 @@ export class LayoutComponent implements OnInit {
       peopleWatching: 200,
       duration: '24:50',
       keyHighlight: 'Manage chronic and complex diseases'
+    },
+    {
+      Thumbnail: '/assets/webinarCards/image 124.png',
+      uploadedBy: {
+        img: '/assets/icons/image 171.png',
+        name: 'by PDGI Indonesia'
+      },
+      description:
+        'Controversies in Bipolar 1 Disorder (BP-1): Implications for Asthama from',
+      credits: {
+        credit: '2',
+        expiringIn: 85800000
+      },
+      peopleWatching: 200,
+      duration: '24:50',
+      keyHighlight: 'Manage chronic and complex diseases'
     }
   ]
 
@@ -240,6 +256,18 @@ export class LayoutComponent implements OnInit {
       progress: 50,
       duration: '24:50',
       keyHighlight: 'Manage chronic and complex diseases'
+    }
+  ]
+  topicOfBased: string = 'cardiology'
+  topSeekers: any[] = [
+    {
+      a: ''
+    },
+    {
+      a: ''
+    },
+    {
+      a: ''
     }
   ]
 

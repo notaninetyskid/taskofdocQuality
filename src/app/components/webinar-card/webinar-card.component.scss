@@ -13,6 +13,10 @@
   @media (min-width: 768px) and (max-width: 991px) {
     width: 302px;
   }
+
+  @media (max-width: 768px) {
+    box-shadow: 0 4px 8px 0 rgba(9, 9, 9, 0.04);
+  }
   .thumbnail {
     overflow: hidden;
     position: relative;

@@ -1,18 +1,18 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { TabNavigationComponent } from './tab-navigation.component';
+import { TopSpeakersComponent } from './top-speakers.component';
 
-describe('TabNavigationComponent', () => {
-  let component: TabNavigationComponent;
-  let fixture: ComponentFixture<TabNavigationComponent>;
+describe('TopSpeakersComponent', () => {
+  let component: TopSpeakersComponent;
+  let fixture: ComponentFixture<TopSpeakersComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ TabNavigationComponent ]
+      declarations: [ TopSpeakersComponent ]
     })
     .compileComponents();
 
-    fixture = TestBed.createComponent(TabNavigationComponent);
+    fixture = TestBed.createComponent(TopSpeakersComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });
