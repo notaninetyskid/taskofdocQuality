@@ -1,4 +1,21 @@
 <div class="webinarCard">
+  <div class="between w-100 d-none d-md-flex d-lg-none" style="padding: 16px">
+    <div class="d-flex justify-content-between align-items-start gap12">
+      <img [src]="data.uploadedBy.img" alt="" />
+      <div>
+        <p>{{ data.uploadedBy.name }}</p>
+        <p class="smally">Sponsored by Roche</p>
+        <div class="titleOfCon smally">
+          <p class="smally">2845 followers</p>
+          <img src="/assets/icons/Ellipse 2991.png" alt="" />
+          <p class="smally">30 min ago</p>
+        </div>
+      </div>
+    </div>
+    <img src="/assets/icons/Group 1171278633.png" alt="" />
+    <img src="/assets/icons/Vector.png" alt="" />
+  </div>
+
   <div class="thumbnail">
     <img class="thumb" [src]="data.Thumbnail" alt="Thumbnail" />
 
@@ -47,6 +64,7 @@
     *ngIf="type == 'Live' || data.type == 'Live'"
     xmlns="http://www.w3.org/2000/svg"
     width="360"
+    style="width: 100%"
     height="4"
     viewBox="0 0 360 4"
     fill="none"
@@ -95,7 +113,7 @@
           <p>750 Views</p>
         </div>
       </div>
-      <div class="likeBottom">
+      <div class="likeBottom d-none d-md-flex d-lg-none">
         <div>
           <img src="/assets/icons/Upvote.svg" alt="" />
           <p>Like</p>

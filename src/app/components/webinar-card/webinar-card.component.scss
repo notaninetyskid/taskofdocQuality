@@ -5,12 +5,15 @@
   width: 360px;
   flex-direction: column;
   align-items: flex-start;
+  border: 1px solid #eee;
+  // border-radius: 8px 8px 0 0;
+  border-radius: 8px;
+  overflow: hidden;
 
   @media (min-width: 768px) and (max-width: 991px) {
     width: 302px;
   }
   .thumbnail {
-    border-radius: 8px 8px 0 0;
     overflow: hidden;
     position: relative;
 
@@ -81,11 +84,11 @@
   .downpart {
     align-self: stretch;
     // border-radius: 0 0 8px 8px;
-    border-right: 1px solid #eee;
-    border-bottom: 1px solid #eee;
-    border-left: 1px solid #eee;
+    // border-right: 1px solid #eee;
+    // border-bottom: 1px solid #eee;
+    // border-left: 1px solid #eee;
     background: #fff;
-
+    // border-radius: 0 0 8px 8px;
     .downSection {
       padding: 16px 16px 20px 16px;
     }
@@ -155,7 +158,7 @@
     }
 
     .highlightCard {
-      width: 328px;
+      // width: 328px;
       height: 56px;
       padding: 8px 12px;
       border-radius: 8px;
@@ -224,17 +227,25 @@
   font-size: 12px !important;
 }
 
+.titleOfCon.smally,
+.smally {
+  font-size: 10px !important;
+  color: $secondPColor !important;
+}
+
 .coverLikes {
   border-top: 1px solid #eee;
   margin-top: 16px;
   display: flex;
   justify-content: space-between;
+  align-items: center;
 }
 
 .likeBottom {
   display: flex;
   justify-content: space-between;
   padding: 8px 16px;
+  border-top: 1px solid #eee;
   margin: 0 -16px -20px -16px;
   div {
     text-align: center;
