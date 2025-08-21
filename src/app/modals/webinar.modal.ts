@@ -1,12 +1,19 @@
 export interface Webinar {
   Thumbnail: string;
-  title: string;
+  uploadedBy: {
+    img: string,
+    name: string,
+    minLeft?: number
+  };
   description: string;
-  credits: {
+  credits?: {
     credit: string;
-    expiringIn: string;
+    expiringIn: number;
   };
   duration?: string;
   keyHighlight?: string;
   statusBadge?: string;
+  peopleWatching?: number;
+  goesLiveOn?: string;
+  progress?: number
 }

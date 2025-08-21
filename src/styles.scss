@@ -3,6 +3,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Lexend+Deca:wght@100..900&display=swap');
 
+
 * {
   font-family: 'Manrope' !important;
 }
@@ -31,7 +32,7 @@ h3 {
   font-size: 16px !important;
   font-weight: 500 !important;
   color: #444242 !important;
-  font-family: 'Lexend Deca' !important;
+//   font-family: 'Lexend Deca' !important;
 }
 
 .posRel {
@@ -60,4 +61,8 @@ input:focus-visible {
 
 .gap12 {
   gap: 12px;
+}
+
+.row  {
+    width: 100% !important;
 }

@@ -1,0 +1,64 @@
+@import 'src/variables';
+
+.continueCard {
+  display: flex;
+  width: 252px;
+  height: 247px;
+  flex-direction: column;
+  align-items: flex-start;
+  border-radius: 8px;
+  border-right: 1px solid #eee;
+  border-bottom: 1px solid #eee;
+  border-left: 1px solid #eee;
+  background: #fff;
+  .thumbnail {
+    border-radius: 8px 8px 0 0;
+    overflow: hidden;
+    position: relative;
+    img {
+      max-height: 247px;
+      max-width: 252px;
+    }
+
+    .timing {
+      position: absolute;
+      bottom: 11px;
+      right: 12px;
+      padding: 4px 8px;
+
+      color: white;
+      border-radius: 4px;
+      background: rgba(29, 25, 25, 0.6);
+    }
+  }
+
+  .downpart {
+    align-self: stretch;
+    border-radius: 0 0 8px 8px;
+    // border-right: 1px solid #eee;
+    // border-bottom: 1px solid #eee;
+    // border-left: 1px solid #eee;
+    background: #fff;
+      padding: 16px;
+
+      h3 {
+        font-weight: 600 !important;
+        margin-bottom: 8px;
+      }
+      .titleOfCon {
+        display: flex;
+        gap: 8px;
+        justify-content: start;
+        align-items: center;
+        color: $secondPColor;
+        font-weight: 500 !important;
+        .eli {
+          white-space: nowrap;
+
+          overflow: hidden;
+          text-overflow: ellipsis;
+          width: 80px;
+        }
+      }
+  }
+}

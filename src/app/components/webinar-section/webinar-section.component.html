@@ -1,7 +1,25 @@
-<h2>{{ title }} Webinars</h2>
-<div class="section" [ngClass]="{ live: live }">
-  <div class="cards">
-    <app-webinar-card *ngFor="let webinar of webinars" [data]="webinar">
-    </app-webinar-card>
+<div class="marginBottom40">
+  <div class="between headingH3">
+    <h2 class="m-0">{{ title }}</h2>
+    <button class="btn viewAll">View all</button>
+  </div>
+
+  <div
+    class="section"
+    [ngClass]="{ live: type == 'Live', 'p-0': type != 'Live' }"
+  >
+    <ng-container *ngFor="let webinar of webinars">
+      <ng-container *ngIf="type == 'Continue'">
+        <div class="continueWatchingCard">
+          <app-continue-watching [data]="webinar"></app-continue-watching>
+        </div>
+      </ng-container>
+
+      <ng-container *ngIf="type != 'Continue'">
+        <div class="cards">
+          <app-webinar-card [type]="type" [data]="webinar"> </app-webinar-card>
+        </div>
+      </ng-container>
+    </ng-container>
   </div>
 </div>

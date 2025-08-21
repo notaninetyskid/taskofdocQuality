@@ -9,6 +9,7 @@ import { Webinar } from 'src/app/modals/webinar.modal';
 export class WebinarCardComponent implements OnInit {
 
   @Input() data!: Webinar;
+  @Input() type!: string;
 
   constructor() { }
 

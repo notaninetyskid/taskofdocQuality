@@ -1,9 +1,94 @@
 <div class="webinarCard">
   <div class="thumbnail">
-    <img src="/assets/webinarCards/image 124.png" alt="" />
-    <div class="liveTag">
-      <img src="/assets/icons/Live minimal.svg" alt="" />
-      <p>Live</p>
+    <img [src]="data.Thumbnail" alt="Thumbnail" />
+
+    <ng-container *ngIf="type == 'Live'">
+      <div>
+        <div class="topLive">
+          <div class="liveTag">
+            <img src="/assets/icons/Live minimal.svg" alt="" />
+            <p>Live</p>
+          </div>
+
+          <div class="livePeople">
+            <img src="/assets/icons/People.svg" alt="" />
+            <p>{{ data?.peopleWatching }}+</p>
+          </div>
+        </div>
+      </div>
+
+      <p class="timing">{{ data?.duration }}</p>
+    </ng-container>
+  </div>
+  <svg
+    xmlns="http://www.w3.org/2000/svg"
+    width="360"
+    height="4"
+    viewBox="0 0 360 4"
+    fill="none"
+  >
+    <path d="M0 2H360" stroke="#E2504B" stroke-width="3" />
+  </svg>
+  <div class="downpart">
+    <div class="downSection">
+      <div class="marginBottom12">
+        <div class="credit">
+          <img src="/assets/icons/Frame 48100047.png" alt="" />
+          <p>
+            {{ data?.credits?.credit }} Credits
+            <span
+              *ngIf="data?.credits?.expiringIn as expiringIn"
+              [ngStyle]="{
+                color: expiringIn <= 86400000 ? 'red' : ''
+              }"
+              >(Expiring in {{ expiringIn | msToTime }})</span
+            >
+          </p>
+        </div>
+        <h3>
+          {{ data.description }}
+        </h3>
+        <div class="titleCase">
+          <img [src]="data.uploadedBy.img" alt="" />
+          <p>{{ data.uploadedBy.name }}</p>
+        </div>
+      </div>
+
+      <ng-container *ngIf="type != 'cardiology'">
+        <div class="highlightCard">
+          <p class="head">KEY HIGHLIGHTS</p>
+          <p class="highLight">{{ data.keyHighlight }}</p>
+        </div>
+      </ng-container>
+
+      <ng-container *ngIf="type == 'cardiology'">
+        <div class="realetdGuidlines">
+          <img src="/assets/icons/image.png" alt="" />
+          <div class="highlightCard border-0 px-0">
+            <p class="head">Related Guideline</p>
+            <p class="highLight">
+              Diclofenac in post operative pain management: Evidence & Best
+              Practices
+            </p>
+          </div>
+        </div>
+      </ng-container>
+
+      <button *ngIf="type == 'Live'" class="watchNowBtn">Watch now</button>
     </div>
+    <ng-container *ngIf="type == 'Upcoming'">
+      <div class="goesLiveNow">
+        <div>
+          <p class="goLiveSmall">Goes live on</p>
+          <p class="goLiveBig">
+            {{ data.goesLiveOn | date: 'd MMM yyyy, h:mm a' }}
+          </p>
+        </div>
+        <button>
+          <img src="/assets/icons/Bell.svg" alt="" />
+          <p>Notify me</p>
+        </button>
+      </div>
+    </ng-container>
   </div>
 </div>

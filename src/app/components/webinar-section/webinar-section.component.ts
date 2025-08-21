@@ -8,7 +8,7 @@ import { Webinar } from 'src/app/modals/webinar.modal'
 })
 export class WebinarSectionComponent implements OnInit {
   @Input() title!: string
-  @Input() live!: boolean
+  @Input() type!: string
   @Input() webinars!: Webinar[]
 
   constructor () {}

@@ -14,9 +14,34 @@
   </div>
 
   <ng-container *ngIf="active == 'Live' || active == 'For you'">
-    <app-webinar-section title="Live" [webinars]="webinars" [live]="true"></app-webinar-section>
+    <app-webinar-section
+      title="Live Webinars"
+      [webinars]="liveWebinars"
+      [type]="'Live'"
+    ></app-webinar-section>
   </ng-container>
+
   <ng-container *ngIf="active == 'Upcoming' || active == 'For you'">
-    <app-webinar-section title="Upcoming" [webinars]="webinars"></app-webinar-section>
+    <app-webinar-section
+      title="Upcoming Webinars"
+      [webinars]="upcomingWebinars"
+      [type]="'Upcoming'"
+    ></app-webinar-section>
+  </ng-container>
+
+  <ng-container *ngIf="active == 'For you'">
+    <app-webinar-section
+      title="Continue watching"
+      [webinars]="webinars"
+      [type]="'Continue'"
+    ></app-webinar-section>
+  </ng-container>
+
+  <ng-container *ngIf="active == 'For you'">
+    <app-webinar-section
+      title="Webinars based on cardiology"
+      [webinars]="webinars"
+      [type]="'cardiology'"
+    ></app-webinar-section>
   </ng-container>
 </div>
