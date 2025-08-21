@@ -22,7 +22,7 @@
     border-bottom: 1px solid #eee;
     padding: 0;
 
-    @media (min-width: 576px) and (max-width: 768px) {
+    @media(max-width: 768px) {
       gap: unset !important;
       justify-content: space-between;
       padding: 10px 16px 0 16px;
