@@ -147,7 +147,7 @@
 
     .realetdGuidlines {
       display: flex;
-      width: 328px;
+      // width: 328px;
       padding-right: 8px;
       align-items: center;
       gap: 12px;
@@ -231,6 +231,7 @@
 .smally {
   font-size: 10px !important;
   color: $secondPColor !important;
+  padding: 0;
 }
 
 .coverLikes {
